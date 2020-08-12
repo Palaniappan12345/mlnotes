@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Pandas</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas_basic/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas_basic/</guid>
+      <description>import pandas as pddf = pd.read_csv(&amp;#39;glass.csv&amp;#39;)df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    RI Na Mg Al Si K Ca Ba Fe Type     0 1.52101 13.64 4.49 1.10 71.78 0.06 8.75 0.00 0.0 1   1 1.51761 13.89 3.60 1.36 72.73 0.48 7.83 0.00 0.0 1   2 1.</description>
+    </item>
+    
+    <item>
       <title>Python_append</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/basics/python_append/</link>
       <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
