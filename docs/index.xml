@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Axes-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/axes_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/axes_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pda = np.array([[1, 1, 1], [2, 3, 1], [4, 9, 2], [8, 27, 4], [16, 1, 1]]) a array([[ 1, 1, 1], [ 2, 3, 1], [ 4, 9, 2], [ 8, 27, 4], [16, 1, 1]])  np.mean(a) 5.4  a.mean() 5.4  np.median(a) 2.0  a.var(ddof=1) 53.40000000000001  np.mean(a, axis=0) array([6.2, 8.2, 1.8])  a.mean(axis=0) array([6.</description>
+    </item>
+    
+    <item>
       <title>Correlation-Coefficient-Metrics</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/correlation_coefficient_metrics/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -27,6 +36,15 @@
       
       <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/correlation_metrics/</guid>
       <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  x = list(range(-10, 11)) y = [0, 2, 2, 2, 2, 3, 3, 6, 7, 4, 7, 6, 6, 9, 4, 5, 5, 10, 11, 12, 14] x_, y_ = np.</description>
+    </item>
+    
+    <item>
+      <title>Dataframe</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/dataframe/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/dataframe/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pda=( [ [2, 3, 1], [4, 9, 2], [8, 27, 4], [16, 1, 1]]) a [[2, 3, 1], [4, 9, 2], [8, 27, 4], [16, 1, 1]]  row_names = [&amp;#39;first&amp;#39;, &amp;#39;second&amp;#39;, &amp;#39;third&amp;#39;, &amp;#39;fourth&amp;#39;] col_names = [&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;, &amp;#39;C&amp;#39;] df = pd.DataFrame( a,index=row_names, columns=col_names) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .</description>
     </item>
     
     <item>
