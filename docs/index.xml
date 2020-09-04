@@ -6,10 +6,118 @@
     <description>Recent content on Palaniappan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Palaniappan12345.github.io/mlnotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Correlation-Coefficient-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/correlation_coefficient_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/correlation_coefficient_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  x = list(range(-10, 11)) y = [0, 2, 2, 2, 2, 3, 3, 6, 7, 4, 7, 6, 6, 9, 4, 5, 5, 10, 11, 12, 14] x_, y_ = np.</description>
+    </item>
+    
+    <item>
+      <title>Correlation-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/correlation_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/correlation_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  x = list(range(-10, 11)) y = [0, 2, 2, 2, 2, 3, 3, 6, 7, 4, 7, 6, 6, 9, 4, 5, 5, 10, 11, 12, 14] x_, y_ = np.</description>
+    </item>
+    
+    <item>
+      <title>Geometric-Mean-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/geometric_mean_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/geometric_mean_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  gmean = 1 for item in x: gmean *= itemgmean **= 1 / len(x) gmean 4.</description>
+    </item>
+    
+    <item>
+      <title>Mean-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/mean_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/mean_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  x_with_nan [8.0, 1, 2.5, nan, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  y_with_nan z 0 8.0 1 1.</description>
+    </item>
+    
+    <item>
+      <title>Median-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/median_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/median_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  n = len(x) if n % 2: median_ = sorted(x)[round(0.5*(n-1))] else: x_ord, index = sorted(x), round(0.</description>
+    </item>
+    
+    <item>
+      <title>Mode-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/mode_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/mode_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  u = [2, 3, 2, 8, 12] mode_ = max((u.count(item), item) for item in set(u))[1] mode_ 2  mode_ = statistics.</description>
+    </item>
+    
+    <item>
+      <title>Percentiles-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/percentiles_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/percentiles_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  x = [-5.0, -1.1, 0.1, 2.0, 8.0, 12.8, 21.0, 25.8, 41.0] statistics.quantiles(x, n=2) [8.</description>
+    </item>
+    
+    <item>
+      <title>Ranges(Min/Max)-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/ranges_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/ranges_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  np.ptp(y) 27.0  np.ptp(y_with_nan) nan  np.amax(y) - np.amin(y) 27.0  np.nanmax(y_with_nan) - np.</description>
+    </item>
+    
+    <item>
+      <title>Skewness-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/skewness_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/skewness_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  x = [8.0, 1, 2.5, 4, 28.0] n = len(x) mean_ = sum(x) / n var_ = sum((item - mean_)**2 for item in x) / (n - 1) std_ = var_ ** 0.</description>
+    </item>
+    
+    <item>
+      <title>Standard-Deviation-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/standard_deviation_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/standard_deviation_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  n = len(x) mean_ = sum(x) / n var_ = sum((item - mean_)**2 for item in x) / (n - 1) var_ 123.</description>
+    </item>
+    
+    <item>
+      <title>Variance-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/variance_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/variance_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  n = len(x) mean_ = sum(x) / n var_ = sum((item - mean_)**2 for item in x) / (n - 1) var_ 123.</description>
+    </item>
+    
+    <item>
+      <title>Weighted-Mean-Metrics</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/weighted_mean_metrics/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/weighted_mean_metrics/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  0.2 * 2 + 0.5 * 4 + 0.3 * 8 4.8  x = [8.</description>
+    </item>
     
     <item>
       <title>Pandas</title>
