@@ -48,6 +48,11 @@
   </url>
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/dataframes/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/numpy/dataframe/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -69,6 +74,11 @@
   
   <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/histogram/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/indexing_dataframes/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -104,6 +114,51 @@
   
   <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/one-hot-encoding/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-aggregations/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-categorial-data/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-concatenation/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-data-functionality/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-function-application/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-iteration/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-merging-joining/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-missing-data/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-series/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   

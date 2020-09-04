@@ -1,5 +1,5 @@
 ---
-title: "Pandas"
+title: "Pandas_basic"
 author: "Palaniappan S"
 date: 2020-08-11
 description: "-"

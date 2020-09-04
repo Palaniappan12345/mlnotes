@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66582-32"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-66582-32');
+    </script>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Pandas-Aggregations" />
+<meta property="og:description" content="-" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-aggregations/" /><meta property="article:published_time" content="2020-09-04T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-09-04T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Pandas-Aggregations"/>
+<meta name="twitter:description" content="-"/>
+<meta name="generator" content="Hugo 0.50" /> 
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Pandas-Aggregations",
+  "url": "https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-aggregations/",
+  "wordCount": "471",
+  "datePublished": "2020-09-04T00:00:00&#43;00:00",
+  "dateModified": "2020-09-04T00:00:00&#43;00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Palaniappan S"
+  },
+  "description": "-"
+}
+</script> 
+
+    <title>Pandas-Aggregations</title>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+    
+    <link href="https://Palaniappan12345.github.io/mlnotes/css/custom.css" rel="stylesheet"> 
+    <link href="https://Palaniappan12345.github.io/mlnotes/css/syntax.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700" rel="stylesheet">
+        
+    <link href="" rel="alternate" type="application/rss+xml" title="Palaniappan" /> 
+    
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://Palaniappan12345.github.io/mlnotes/">Palaniappan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                 
+
+
+<article>
+  <div class="technical_note">
+  <header>
+      
+    <h1 class="technical_note_title">Pandas-Aggregations</h1>
+    <div class="technical_note_date">
+      <time datetime=" 2020-09-04T00:00:00Z "> 04 Sep 2020</time>
+    </div>
+  </header>
+  <div class="content">
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">sklearn</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Applying Aggregations on DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+   <span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;1/1/2000&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
+   <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">])</span>
+
+<span class="n">df</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2000-01-01</th>
+      <td>0.744195</td>
+      <td>0.496521</td>
+      <td>-0.134224</td>
+      <td>-0.409785</td>
+    </tr>
+    <tr>
+      <th>2000-01-02</th>
+      <td>-0.566781</td>
+      <td>1.073489</td>
+      <td>-0.366540</td>
+      <td>-0.438647</td>
+    </tr>
+    <tr>
+      <th>2000-01-03</th>
+      <td>0.116797</td>
+      <td>2.020010</td>
+      <td>1.350292</td>
+      <td>1.059606</td>
+    </tr>
+    <tr>
+      <th>2000-01-04</th>
+      <td>-1.307016</td>
+      <td>-0.376845</td>
+      <td>-0.255637</td>
+      <td>-1.209852</td>
+    </tr>
+    <tr>
+      <th>2000-01-05</th>
+      <td>-0.211576</td>
+      <td>0.353178</td>
+      <td>1.508859</td>
+      <td>0.414203</td>
+    </tr>
+    <tr>
+      <th>2000-01-06</th>
+      <td>0.916487</td>
+      <td>-0.745630</td>
+      <td>1.668101</td>
+      <td>0.212629</td>
+    </tr>
+    <tr>
+      <th>2000-01-07</th>
+      <td>-0.742183</td>
+      <td>0.420636</td>
+      <td>0.256069</td>
+      <td>0.322182</td>
+    </tr>
+    <tr>
+      <th>2000-01-08</th>
+      <td>-0.107362</td>
+      <td>-0.337345</td>
+      <td>-0.406309</td>
+      <td>0.897112</td>
+    </tr>
+    <tr>
+      <th>2000-01-09</th>
+      <td>0.799588</td>
+      <td>-0.381785</td>
+      <td>1.757035</td>
+      <td>0.031658</td>
+    </tr>
+    <tr>
+      <th>2000-01-10</th>
+      <td>-1.582323</td>
+      <td>-1.925102</td>
+      <td>-0.361671</td>
+      <td>1.229835</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">r</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">r</span></code></pre></div>
+<pre><code>Rolling [window=3,min_periods=1,center=False,axis=0]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Apply Aggregation on a Whole Dataframe</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">)</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2000-01-01</th>
+      <td>0.744195</td>
+      <td>0.496521</td>
+      <td>-0.134224</td>
+      <td>-0.409785</td>
+    </tr>
+    <tr>
+      <th>2000-01-02</th>
+      <td>0.177414</td>
+      <td>1.570010</td>
+      <td>-0.500764</td>
+      <td>-0.848433</td>
+    </tr>
+    <tr>
+      <th>2000-01-03</th>
+      <td>0.294211</td>
+      <td>3.590020</td>
+      <td>0.849527</td>
+      <td>0.211173</td>
+    </tr>
+    <tr>
+      <th>2000-01-04</th>
+      <td>-1.757000</td>
+      <td>2.716654</td>
+      <td>0.728115</td>
+      <td>-0.588893</td>
+    </tr>
+    <tr>
+      <th>2000-01-05</th>
+      <td>-1.401794</td>
+      <td>1.996343</td>
+      <td>2.603514</td>
+      <td>0.263957</td>
+    </tr>
+    <tr>
+      <th>2000-01-06</th>
+      <td>-0.602105</td>
+      <td>-0.769297</td>
+      <td>2.921323</td>
+      <td>-0.583020</td>
+    </tr>
+    <tr>
+      <th>2000-01-07</th>
+      <td>-0.037272</td>
+      <td>0.028183</td>
+      <td>3.433029</td>
+      <td>0.949014</td>
+    </tr>
+    <tr>
+      <th>2000-01-08</th>
+      <td>0.066942</td>
+      <td>-0.662339</td>
+      <td>1.517861</td>
+      <td>1.431924</td>
+    </tr>
+    <tr>
+      <th>2000-01-09</th>
+      <td>-0.049957</td>
+      <td>-0.298494</td>
+      <td>1.606795</td>
+      <td>1.250953</td>
+    </tr>
+    <tr>
+      <th>2000-01-10</th>
+      <td>-0.890096</td>
+      <td>-2.644232</td>
+      <td>0.989055</td>
+      <td>2.158605</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Apply Aggregation on a Single Column of a Dataframe</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">r</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">)</span></code></pre></div>
+<pre><code>2000-01-01    0.744195
+2000-01-02    0.177414
+2000-01-03    0.294211
+2000-01-04   -1.757000
+2000-01-05   -1.401794
+2000-01-06   -0.602105
+2000-01-07   -0.037272
+2000-01-08    0.066942
+2000-01-09   -0.049957
+2000-01-10   -0.890096
+Freq: D, Name: A, dtype: float64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Apply Aggregation on Multiple Columns of a DataFrame</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">r</span><span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">)</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2000-01-01</th>
+      <td>0.744195</td>
+      <td>0.496521</td>
+    </tr>
+    <tr>
+      <th>2000-01-02</th>
+      <td>0.177414</td>
+      <td>1.570010</td>
+    </tr>
+    <tr>
+      <th>2000-01-03</th>
+      <td>0.294211</td>
+      <td>3.590020</td>
+    </tr>
+    <tr>
+      <th>2000-01-04</th>
+      <td>-1.757000</td>
+      <td>2.716654</td>
+    </tr>
+    <tr>
+      <th>2000-01-05</th>
+      <td>-1.401794</td>
+      <td>1.996343</td>
+    </tr>
+    <tr>
+      <th>2000-01-06</th>
+      <td>-0.602105</td>
+      <td>-0.769297</td>
+    </tr>
+    <tr>
+      <th>2000-01-07</th>
+      <td>-0.037272</td>
+      <td>0.028183</td>
+    </tr>
+    <tr>
+      <th>2000-01-08</th>
+      <td>0.066942</td>
+      <td>-0.662339</td>
+    </tr>
+    <tr>
+      <th>2000-01-09</th>
+      <td>-0.049957</td>
+      <td>-0.298494</td>
+    </tr>
+    <tr>
+      <th>2000-01-10</th>
+      <td>-0.890096</td>
+      <td>-2.644232</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Apply Multiple Functions on Multiple Columns of a DataFrame</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">r</span><span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">aggregate</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">])</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2" halign="left">A</th>
+      <th colspan="2" halign="left">B</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>sum</th>
+      <th>mean</th>
+      <th>sum</th>
+      <th>mean</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2000-01-01</th>
+      <td>0.744195</td>
+      <td>0.744195</td>
+      <td>0.496521</td>
+      <td>0.496521</td>
+    </tr>
+    <tr>
+      <th>2000-01-02</th>
+      <td>0.177414</td>
+      <td>0.088707</td>
+      <td>1.570010</td>
+      <td>0.785005</td>
+    </tr>
+    <tr>
+      <th>2000-01-03</th>
+      <td>0.294211</td>
+      <td>0.098070</td>
+      <td>3.590020</td>
+      <td>1.196673</td>
+    </tr>
+    <tr>
+      <th>2000-01-04</th>
+      <td>-1.757000</td>
+      <td>-0.585667</td>
+      <td>2.716654</td>
+      <td>0.905551</td>
+    </tr>
+    <tr>
+      <th>2000-01-05</th>
+      <td>-1.401794</td>
+      <td>-0.467265</td>
+      <td>1.996343</td>
+      <td>0.665448</td>
+    </tr>
+    <tr>
+      <th>2000-01-06</th>
+      <td>-0.602105</td>
+      <td>-0.200702</td>
+      <td>-0.769297</td>
+      <td>-0.256432</td>
+    </tr>
+    <tr>
+      <th>2000-01-07</th>
+      <td>-0.037272</td>
+      <td>-0.012424</td>
+      <td>0.028183</td>
+      <td>0.009394</td>
+    </tr>
+    <tr>
+      <th>2000-01-08</th>
+      <td>0.066942</td>
+      <td>0.022314</td>
+      <td>-0.662339</td>
+      <td>-0.220780</td>
+    </tr>
+    <tr>
+      <th>2000-01-09</th>
+      <td>-0.049957</td>
+      <td>-0.016652</td>
+      <td>-0.298494</td>
+      <td>-0.099498</td>
+    </tr>
+    <tr>
+      <th>2000-01-10</th>
+      <td>-0.890096</td>
+      <td>-0.296699</td>
+      <td>-2.644232</td>
+      <td>-0.881411</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Apply Different Functions to Different Columns of a Dataframe</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s1">&#39;A&#39;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">,</span><span class="s1">&#39;B&#39;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">})</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2000-01-01</th>
+      <td>0.744195</td>
+      <td>0.496521</td>
+    </tr>
+    <tr>
+      <th>2000-01-02</th>
+      <td>0.177414</td>
+      <td>0.785005</td>
+    </tr>
+    <tr>
+      <th>2000-01-03</th>
+      <td>0.294211</td>
+      <td>1.196673</td>
+    </tr>
+    <tr>
+      <th>2000-01-04</th>
+      <td>-1.757000</td>
+      <td>0.905551</td>
+    </tr>
+    <tr>
+      <th>2000-01-05</th>
+      <td>-1.401794</td>
+      <td>0.665448</td>
+    </tr>
+    <tr>
+      <th>2000-01-06</th>
+      <td>-0.602105</td>
+      <td>-0.256432</td>
+    </tr>
+    <tr>
+      <th>2000-01-07</th>
+      <td>-0.037272</td>
+      <td>0.009394</td>
+    </tr>
+    <tr>
+      <th>2000-01-08</th>
+      <td>0.066942</td>
+      <td>-0.220780</td>
+    </tr>
+    <tr>
+      <th>2000-01-09</th>
+      <td>-0.049957</td>
+      <td>-0.099498</td>
+    </tr>
+    <tr>
+      <th>2000-01-10</th>
+      <td>-0.890096</td>
+      <td>-0.881411</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+  <aside>
+      
+      </aside>
+
+    </div>
+</article>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">This project contains 45 pages and is available on <a href="https://github.com/Palaniappan12345">GitHub</a>. Copyright &copy; TEAM TACT, <time datetime="2019">2019</time>.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

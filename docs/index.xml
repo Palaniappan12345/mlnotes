@@ -93,6 +93,15 @@
     </item>
     
     <item>
+      <title>DataFrames</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/dataframes/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/dataframes/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearndict = {&amp;#34;country&amp;#34;: [&amp;#34;Brazil&amp;#34;, &amp;#34;Russia&amp;#34;, &amp;#34;India&amp;#34;, &amp;#34;China&amp;#34;, &amp;#34;South Africa&amp;#34;], &amp;#34;capital&amp;#34;: [&amp;#34;Brasilia&amp;#34;, &amp;#34;Moscow&amp;#34;, &amp;#34;New Dehli&amp;#34;, &amp;#34;Beijing&amp;#34;, &amp;#34;Pretoria&amp;#34;], &amp;#34;area&amp;#34;: [8.516, 17.10, 3.286, 9.597, 1.221], &amp;#34;population&amp;#34;: [200.4, 143.5, 1252, 1357, 52.98] }df = pd.DataFrame(dict)df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    country capital area population     0 Brazil Brasilia 8.</description>
+    </item>
+    
+    <item>
       <title>Dataframe</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/dataframe/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -135,6 +144,15 @@
       
       <guid>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/histogram/</guid>
       <description>import math import statistics import numpy as np import scipy.stats import pandas as pdimport matplotlib.pyplot as plt plt.style.use(&amp;#39;ggplot&amp;#39;)np.random.seed(seed=0) x = np.random.randn(1000) y = np.random.randn(100) z = np.random.randn(10)hist, bin_edges = np.histogram(x, bins=10) hist array([ 9, 20, 70, 146, 217, 239, 160, 86, 38, 15])  bin_edges array([-3.04614305, -2.46559324, -1.88504342, -1.3044936 , -0.72394379, -0.14339397, 0.43715585, 1.01770566, 1.59825548, 2.1788053 , 2.75935511])  fig, ax = plt.subplots() ax.hist(x, bin_edges, cumulative=False) ax.set_xlabel(&amp;#39;x&amp;#39;) ax.set_ylabel(&amp;#39;Frequency&amp;#39;) plt.show() fig, ax = plt.</description>
+    </item>
+    
+    <item>
+      <title>Indexing-DataFrames</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/indexing_dataframes/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/indexing_dataframes/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearndict = {&amp;#34;country&amp;#34;: [&amp;#34;Brazil&amp;#34;, &amp;#34;Russia&amp;#34;, &amp;#34;India&amp;#34;, &amp;#34;China&amp;#34;, &amp;#34;South Africa&amp;#34;], &amp;#34;capital&amp;#34;: [&amp;#34;Brasilia&amp;#34;, &amp;#34;Moscow&amp;#34;, &amp;#34;New Dehli&amp;#34;, &amp;#34;Beijing&amp;#34;, &amp;#34;Pretoria&amp;#34;], &amp;#34;area&amp;#34;: [8.516, 17.10, 3.286, 9.597, 1.221], &amp;#34;population&amp;#34;: [200.4, 143.5, 1252, 1357, 52.98] }df = pd.DataFrame(dict)df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    country capital area population     0 Brazil Brasilia 8.</description>
     </item>
     
     <item>
@@ -198,6 +216,87 @@
       
       <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/one-hot-encoding/</guid>
       <description>import numpy as np import scipy.stats import pandas as pd import sklearndata = pd.read_csv(&amp;#34;grocery.csv&amp;#34;) print(data)   Item Price 0 Onion 100 1 Egg 10 2 Tomato 60 3 Carrot 60 4 Cabbage 20 5 Milk 30 6 Potato 50 7 Mosquito Bat 200 8 Scissor 75 9 Shampoo 3  # label encoding the data  from sklearn.preprocessing import LabelEncoder le = LabelEncoder() data[&amp;#39;Item&amp;#39;]= le.fit_transform(data[&amp;#39;Item&amp;#39;]) print(data)  Item Price 0 5 100 1 2 10 2 9 60 3 1 60 4 0 20 5 3 30 6 6 50 7 4 200 8 7 75 9 8 3  # importing one hot encoder from sklearn  from sklearn.</description>
+    </item>
+    
+    <item>
+      <title>Pandas-Aggregations</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-aggregations/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-aggregations/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearn#Applying Aggregations on DataFrame df = pd.DataFrame(np.random.randn(10, 4), index = pd.date_range(&amp;#39;1/1/2000&amp;#39;, periods=10), columns = [&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;, &amp;#39;C&amp;#39;, &amp;#39;D&amp;#39;]) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    A B C D     2000-01-01 0.744195 0.496521 -0.134224 -0.409785   2000-01-02 -0.</description>
+    </item>
+    
+    <item>
+      <title>Pandas-Categorial-Data</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-categorial-data/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-categorial-data/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearn#Object Creation s = pd.Series([&amp;#34;a&amp;#34;,&amp;#34;b&amp;#34;,&amp;#34;c&amp;#34;,&amp;#34;a&amp;#34;], dtype=&amp;#34;category&amp;#34;) s 0 a 1 b 2 c 3 a dtype: category Categories (3, object): [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]  cat = pd.Categorical([&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]) cat [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;] Categories (3, object): [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]  cat = pd.Categorical([&amp;#34;a&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;c&amp;#34;, np.nan], categories=[&amp;#34;b&amp;#34;, &amp;#34;a&amp;#34;, &amp;#34;c&amp;#34;]) df = pd.DataFrame({&amp;#34;cat&amp;#34;:cat, &amp;#34;s&amp;#34;:[&amp;#34;a&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;c&amp;#34;, np.</description>
+    </item>
+    
+    <item>
+      <title>Pandas-Concatenation</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-concatenation/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-concatenation/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearnone = pd.DataFrame({ &amp;#39;Name&amp;#39;: [&amp;#39;Alex&amp;#39;, &amp;#39;Amy&amp;#39;, &amp;#39;Allen&amp;#39;, &amp;#39;Alice&amp;#39;, &amp;#39;Ayoung&amp;#39;], &amp;#39;subject_id&amp;#39;:[&amp;#39;sub1&amp;#39;,&amp;#39;sub2&amp;#39;,&amp;#39;sub4&amp;#39;,&amp;#39;sub6&amp;#39;,&amp;#39;sub5&amp;#39;], &amp;#39;Marks_scored&amp;#39;:[98,90,87,69,78]}, index=[1,2,3,4,5]) two = pd.DataFrame({ &amp;#39;Name&amp;#39;: [&amp;#39;Billy&amp;#39;, &amp;#39;Brian&amp;#39;, &amp;#39;Bran&amp;#39;, &amp;#39;Bryce&amp;#39;, &amp;#39;Betty&amp;#39;], &amp;#39;subject_id&amp;#39;:[&amp;#39;sub2&amp;#39;,&amp;#39;sub4&amp;#39;,&amp;#39;sub3&amp;#39;,&amp;#39;sub6&amp;#39;,&amp;#39;sub5&amp;#39;], &amp;#39;Marks_scored&amp;#39;:[89,80,79,97,88]}, index=[1,2,3,4,5]) pd.concat([one,two])  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Name subject_id Marks_scored     1 Alex sub1 98   2 Amy sub2 90   3 Allen sub4 87   4 Alice sub6 69   5 Ayoung sub5 78   1 Billy sub2 89   2 Brian sub4 80   3 Bran sub3 79   4 Bryce sub6 97   5 Betty sub5 88     pd.</description>
+    </item>
+    
+    <item>
+      <title>Pandas-Data-Functionality</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-data-functionality/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-data-functionality/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearn#Create a Range of Dates pd.date_range(&amp;#39;1/1/2011&amp;#39;, periods=5) DatetimeIndex([&#39;2011-01-01&#39;, &#39;2011-01-02&#39;, &#39;2011-01-03&#39;, &#39;2011-01-04&#39;, &#39;2011-01-05&#39;], dtype=&#39;datetime64[ns]&#39;, freq=&#39;D&#39;)  #Change the Date Frequency pd.date_range(&amp;#39;1/1/2011&amp;#39;, periods=5,freq=&amp;#39;M&amp;#39;) DatetimeIndex([&#39;2011-01-31&#39;, &#39;2011-02-28&#39;, &#39;2011-03-31&#39;, &#39;2011-04-30&#39;, &#39;2011-05-31&#39;], dtype=&#39;datetime64[ns]&#39;, freq=&#39;M&#39;)  #bdate_range pd.date_range(&amp;#39;1/1/2011&amp;#39;, periods=5) DatetimeIndex([&#39;2011-01-01&#39;, &#39;2011-01-02&#39;, &#39;2011-01-03&#39;, &#39;2011-01-04&#39;, &#39;2011-01-05&#39;], dtype=&#39;datetime64[ns]&#39;, freq=&#39;D&#39;)  start = pd.datetime(2011, 1, 1) end = pd.datetime(2011, 1, 5) pd.date_range(start, end) &amp;lt;ipython-input-7-dd7f9190c50e&amp;gt;:1: FutureWarning: The pandas.datetime class is deprecated and will be removed from pandas in a future version.</description>
+    </item>
+    
+    <item>
+      <title>Pandas-Function-Application</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-function-application/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-function-application/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearn#Table-wise Function Application def adder(ele1,ele2): return ele1+ele2 df = pd.DataFrame(np.random.randn(5,3),columns=[&amp;#39;col1&amp;#39;,&amp;#39;col2&amp;#39;,&amp;#39;col3&amp;#39;]) df.pipe(adder,2) df.apply(np.mean) col1 -0.165957 col2 -0.488008 col3 -0.516572 dtype: float64  #Row or Column Wise Function Application df = pd.DataFrame(np.random.randn(5,3),columns=[&amp;#39;col1&amp;#39;,&amp;#39;col2&amp;#39;,&amp;#39;col3&amp;#39;]) df.apply(np.mean) df.apply(np.mean) col1 0.129294 col2 0.310800 col3 0.410874 dtype: float64  df = pd.DataFrame(np.random.randn(5,3),columns=[&amp;#39;col1&amp;#39;,&amp;#39;col2&amp;#39;,&amp;#39;col3&amp;#39;]) df.apply(lambda x: x.max() - x.min()) df.apply(np.mean) col1 0.284628 col2 -0.365105 col3 0.449976 dtype: float64  #Element Wise Function Application df = pd.</description>
+    </item>
+    
+    <item>
+      <title>Pandas-Iteration</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-iteration/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-iteration/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearnN=20 df = pd.DataFrame({ &amp;#39;A&amp;#39;: pd.date_range(start=&amp;#39;2016-01-01&amp;#39;,periods=N,freq=&amp;#39;D&amp;#39;), &amp;#39;x&amp;#39;: np.linspace(0,stop=N-1,num=N), &amp;#39;y&amp;#39;: np.random.rand(N), &amp;#39;C&amp;#39;: np.random.choice([&amp;#39;Low&amp;#39;,&amp;#39;Medium&amp;#39;,&amp;#39;High&amp;#39;],N).tolist(), &amp;#39;D&amp;#39;: np.random.normal(100, 10, size=(N)).tolist() }) for col in df: print(col) A x y C D  #iteritems() df = pd.DataFrame(np.random.randn(4,3),columns=[&amp;#39;col1&amp;#39;,&amp;#39;col2&amp;#39;,&amp;#39;col3&amp;#39;]) for key,value in df.iteritems(): print (key,value) col1 0 1.383371 1 -0.752669 2 -0.989764 3 0.184005 Name: col1, dtype: float64 col2 0 -1.432349 1 1.804341 2 1.730258 3 -0.</description>
+    </item>
+    
+    <item>
+      <title>Pandas-Merging/Joining</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-merging-joining/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-merging-joining/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearnleft = pd.DataFrame({ &amp;#39;id&amp;#39;:[1,2,3,4,5], &amp;#39;Name&amp;#39;: [&amp;#39;Alex&amp;#39;, &amp;#39;Amy&amp;#39;, &amp;#39;Allen&amp;#39;, &amp;#39;Alice&amp;#39;, &amp;#39;Ayoung&amp;#39;], &amp;#39;subject_id&amp;#39;:[&amp;#39;sub1&amp;#39;,&amp;#39;sub2&amp;#39;,&amp;#39;sub4&amp;#39;,&amp;#39;sub6&amp;#39;,&amp;#39;sub5&amp;#39;]}) right = pd.DataFrame( {&amp;#39;id&amp;#39;:[1,2,3,4,5], &amp;#39;Name&amp;#39;: [&amp;#39;Billy&amp;#39;, &amp;#39;Brian&amp;#39;, &amp;#39;Bran&amp;#39;, &amp;#39;Bryce&amp;#39;, &amp;#39;Betty&amp;#39;], &amp;#39;subject_id&amp;#39;:[&amp;#39;sub2&amp;#39;,&amp;#39;sub4&amp;#39;,&amp;#39;sub3&amp;#39;,&amp;#39;sub6&amp;#39;,&amp;#39;sub5&amp;#39;]}) left  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    id Name subject_id     0 1 Alex sub1   1 2 Amy sub2   2 3 Allen sub4   3 4 Alice sub6   4 5 Ayoung sub5     right  .</description>
+    </item>
+    
+    <item>
+      <title>Pandas-Missing-Data</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-missing-data/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-missing-data/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearndf = pd.DataFrame(np.random.randn(5, 3), index=[&amp;#39;a&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;e&amp;#39;, &amp;#39;f&amp;#39;, &amp;#39;h&amp;#39;],columns=[&amp;#39;one&amp;#39;, &amp;#39;two&amp;#39;, &amp;#39;three&amp;#39;]) df = df.reindex([&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;, &amp;#39;e&amp;#39;, &amp;#39;f&amp;#39;, &amp;#39;g&amp;#39;, &amp;#39;h&amp;#39;]) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    one two three     a -1.594997 -0.870257 -0.</description>
+    </item>
+    
+    <item>
+      <title>Pandas-Series</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-series/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-series/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearn#Creating empty series #import the pandas library and aliasing as pd import pandas as pd s = pd.Series() s &amp;lt;ipython-input-4-4eaadbf67d2e&amp;gt;:4: DeprecationWarning: The default dtype for empty Series will be &#39;object&#39; instead of &#39;float64&#39; in a future version. Specify a dtype explicitly to silence this warning. s = pd.Series() Series([], dtype: float64)  #Create a Series from ndarray data = np.</description>
     </item>
     
     <item>
@@ -282,7 +381,7 @@
     </item>
     
     <item>
-      <title>Pandas</title>
+      <title>Pandas_basic</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas_basic/</link>
       <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
       
