@@ -8,6 +8,26 @@
   </url>
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/bar_chart/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_tokenisation/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/box-plot/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/confusion_matrix/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/numpy/correlation_coefficient_metrics/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -18,12 +38,52 @@
   </url>
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_data_importing_and_exploration/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_data_visualisation/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/numpy/dataframe/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/f1_score/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/numpy/geometric_mean_metrics/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/heatmap/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/histogram/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/k-neighbors_classifier/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/label_encoding/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/linear_svc/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,7 +103,17 @@
   </url>
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/one-hot-encoding/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/numpy/percentiles_metrics/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/pie_chart/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,12 +133,22 @@
   </url>
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/train_test_split/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/numpy/variance_metrics/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/numpy/weighted_mean_metrics/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/x-y_plot/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   

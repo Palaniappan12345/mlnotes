@@ -21,6 +21,42 @@
     </item>
     
     <item>
+      <title>Bar-chart</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/bar_chart/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/bar_chart/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdimport matplotlib.pyplot as plt plt.style.use(&amp;#39;ggplot&amp;#39;)x = np.arange(21) y = np.random.randint(21, size=21) err = np.random.randn(21)fig, ax = plt.subplots() ax.bar(x, y, yerr=err) ax.set_xlabel(&amp;#39;x&amp;#39;) ax.set_ylabel(&amp;#39;y&amp;#39;) plt.show() </description>
+    </item>
+    
+    <item>
+      <title>Basic-tokenisation</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_tokenisation/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_tokenisation/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pd import sklearn import reSms_content=[&amp;#39;What is going on&amp;#39;,&amp;#39;How is your life&amp;#39;,&amp;#39;oh! god what is happening&amp;#39;] df=pd.DataFrame(Sms_content,columns={&amp;#39;sms&amp;#39;}) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    sms     0 What is going on   1 How is your life   2 oh!</description>
+    </item>
+    
+    <item>
+      <title>Box-plot</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/box-plot/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/box-plot/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdimport matplotlib.pyplot as plt plt.style.use(&amp;#39;ggplot&amp;#39;)np.random.seed(seed=0) x = np.random.randn(1000) y = np.random.randn(100) z = np.random.randn(10)fig, ax = plt.subplots() ax.boxplot((x, y, z), vert=False, showmeans=True, meanline=True, labels=(&amp;#39;x&amp;#39;, &amp;#39;y&amp;#39;, &amp;#39;z&amp;#39;), patch_artist=True, medianprops={&amp;#39;linewidth&amp;#39;: 2, &amp;#39;color&amp;#39;: &amp;#39;purple&amp;#39;}, meanprops={&amp;#39;linewidth&amp;#39;: 2, &amp;#39;color&amp;#39;: &amp;#39;red&amp;#39;}) plt.show() </description>
+    </item>
+    
+    <item>
+      <title>Confusion-matrix</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/confusion_matrix/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/confusion_matrix/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pd import sklearnfrom sklearn.metrics import confusion_matrixdata = {&amp;#39;y_Actual&amp;#39;: [1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0], &amp;#39;y_Predicted&amp;#39;: [1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0] }df = pd.DataFrame(data, columns=[&amp;#39;y_Actual&amp;#39;,&amp;#39;y_Predicted&amp;#39;])f1_score(true, pred,average=&amp;#34;micro&amp;#34;) 0.3333333333333333  confusion_matrix = pd.crosstab(df[&amp;#39;y_Actual&amp;#39;], df[&amp;#39;y_Predicted&amp;#39;], rownames=[&amp;#39;Actual&amp;#39;], colnames=[&amp;#39;Predicted&amp;#39;]) print (confusion_matrix) Predicted 0 1 Actual 0 5 2 1 1 4  </description>
+    </item>
+    
+    <item>
       <title>Correlation-Coefficient-Metrics</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/correlation_coefficient_metrics/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -39,6 +75,24 @@
     </item>
     
     <item>
+      <title>Data-importing-and-exploring</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_data_importing_and_exploration/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_data_importing_and_exploration/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pd import sklearndf = pd.read_csv(&amp;#39;glass.csv&amp;#39;)df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    RI Na Mg Al Si K Ca Ba Fe Type     0 1.52101 13.64 4.49 1.10 71.78 0.06 8.75 0.00 0.0 1   1 1.</description>
+    </item>
+    
+    <item>
+      <title>Data-visualisation-using-dataset</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_data_visualisation/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_data_visualisation/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pd import sklearndf = pd.read_csv(&amp;#39;glass.csv&amp;#39;)df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    RI Na Mg Al Si K Ca Ba Fe Type     0 1.52101 13.64 4.49 1.10 71.78 0.06 8.75 0.00 0.0 1   1 1.</description>
+    </item>
+    
+    <item>
       <title>Dataframe</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/dataframe/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -48,12 +102,66 @@
     </item>
     
     <item>
+      <title>F1-score</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/f1_score/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/f1_score/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pd import sklearnfrom sklearn.metrics import f1_score true = [0, 1, 2, 0, 1, 2] pred = [0, 2, 1, 0, 0, 1]f1_score(true, pred,average=None).mean() 0.26666666666666666  f1_score(true, pred,average=&amp;#34;macro&amp;#34;) 0.26666666666666666  f1_score(true, pred,average=&amp;#34;micro&amp;#34;) 0.3333333333333333  f1_score(true, pred,average=&amp;#34;weighted&amp;#34;) 0.26666666666666666  </description>
+    </item>
+    
+    <item>
       <title>Geometric-Mean-Metrics</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/geometric_mean_metrics/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/geometric_mean_metrics/</guid>
       <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  gmean = 1 for item in x: gmean *= itemgmean **= 1 / len(x) gmean 4.</description>
+    </item>
+    
+    <item>
+      <title>Heatmap</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/heatmap/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/heatmap/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdimport matplotlib.pyplot as plt plt.style.use(&amp;#39;ggplot&amp;#39;)x = np.arange(21) y = 5 + 2 * x + 2 * np.random.randn(21) slope, intercept, r, *__ = scipy.stats.linregress(x, y) line = f&amp;#39;Regression line: y={intercept:.2f}+{slope:.2f}x, r={r:.2f}&amp;#39;matrix = np.cov(x, y).round(decimals=2) fig, ax = plt.subplots() ax.imshow(matrix) ax.grid(False) ax.xaxis.set(ticks=(0, 1), ticklabels=(&amp;#39;x&amp;#39;, &amp;#39;y&amp;#39;)) ax.yaxis.set(ticks=(0, 1), ticklabels=(&amp;#39;x&amp;#39;, &amp;#39;y&amp;#39;)) ax.set_ylim(1.5, -0.5) for i in range(2): for j in range(2): ax.</description>
+    </item>
+    
+    <item>
+      <title>Histogram</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/histogram/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/histogram/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdimport matplotlib.pyplot as plt plt.style.use(&amp;#39;ggplot&amp;#39;)np.random.seed(seed=0) x = np.random.randn(1000) y = np.random.randn(100) z = np.random.randn(10)hist, bin_edges = np.histogram(x, bins=10) hist array([ 9, 20, 70, 146, 217, 239, 160, 86, 38, 15])  bin_edges array([-3.04614305, -2.46559324, -1.88504342, -1.3044936 , -0.72394379, -0.14339397, 0.43715585, 1.01770566, 1.59825548, 2.1788053 , 2.75935511])  fig, ax = plt.subplots() ax.hist(x, bin_edges, cumulative=False) ax.set_xlabel(&amp;#39;x&amp;#39;) ax.set_ylabel(&amp;#39;Frequency&amp;#39;) plt.show() fig, ax = plt.</description>
+    </item>
+    
+    <item>
+      <title>K-Neighbors-Classifier</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/k-neighbors_classifier/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/k-neighbors_classifier/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pd import sklearn from sklearn.naive_bayes import GaussianNB from sklearn.metrics import accuracy_score from sklearn.model_selection import train_test_splitdf = pd.read_csv(&amp;#39;glass.csv&amp;#39;)df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    RI Na Mg Al Si K Ca Ba Fe Type     0 1.</description>
+    </item>
+    
+    <item>
+      <title>Label-encoding</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/label_encoding/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/label_encoding/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearndata = pd.read_csv(&amp;#34;grocery.csv&amp;#34;) print(data)   Item Price 0 Onion 100 1 Egg 10 2 Tomato 60 3 Carrot 60 4 Cabbage 20 5 Milk 30 6 Potato 50 7 Mosquito Bat 200 8 Scissor 75 9 Shampoo 3  # label encoding the data  from sklearn.preprocessing import LabelEncoder le = LabelEncoder() data[&amp;#39;Item&amp;#39;]= le.fit_transform(data[&amp;#39;Item&amp;#39;]) print(data)  Item Price 0 5 100 1 2 10 2 9 60 3 1 60 4 0 20 5 3 30 6 6 50 7 4 200 8 7 75 9 8 3  </description>
+    </item>
+    
+    <item>
+      <title>Linear-SVC</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/linear_svc/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/linear_svc/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pd import sklearn from sklearn.naive_bayes import GaussianNB from sklearn.metrics import accuracy_score from sklearn.model_selection import train_test_splitdf = pd.read_csv(&amp;#39;glass.csv&amp;#39;)df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    RI Na Mg Al Si K Ca Ba Fe Type     0 1.</description>
     </item>
     
     <item>
@@ -84,12 +192,30 @@
     </item>
     
     <item>
+      <title>One-hot-encoding</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/one-hot-encoding/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/one-hot-encoding/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearndata = pd.read_csv(&amp;#34;grocery.csv&amp;#34;) print(data)   Item Price 0 Onion 100 1 Egg 10 2 Tomato 60 3 Carrot 60 4 Cabbage 20 5 Milk 30 6 Potato 50 7 Mosquito Bat 200 8 Scissor 75 9 Shampoo 3  # label encoding the data  from sklearn.preprocessing import LabelEncoder le = LabelEncoder() data[&amp;#39;Item&amp;#39;]= le.fit_transform(data[&amp;#39;Item&amp;#39;]) print(data)  Item Price 0 5 100 1 2 10 2 9 60 3 1 60 4 0 20 5 3 30 6 6 50 7 4 200 8 7 75 9 8 3  # importing one hot encoder from sklearn  from sklearn.</description>
+    </item>
+    
+    <item>
       <title>Percentiles-Metrics</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/percentiles_metrics/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/percentiles_metrics/</guid>
       <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  x = [-5.0, -1.1, 0.1, 2.0, 8.0, 12.8, 21.0, 25.8, 41.0] statistics.quantiles(x, n=2) [8.</description>
+    </item>
+    
+    <item>
+      <title>Pie-chart</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/pie_chart/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/pie_chart/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdimport matplotlib.pyplot as plt plt.style.use(&amp;#39;ggplot&amp;#39;)fig, ax = plt.subplots() ax.pie((x, y, z), labels=(&amp;#39;x&amp;#39;, &amp;#39;y&amp;#39;, &amp;#39;z&amp;#39;), autopct=&amp;#39;%1.1f%%&amp;#39;) plt.show() </description>
     </item>
     
     <item>
@@ -120,6 +246,15 @@
     </item>
     
     <item>
+      <title>Train-Test-split(NB-Clasifier)</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/train_test_split/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/train_test_split/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pd import sklearn from sklearn.naive_bayes import GaussianNB from sklearn.metrics import accuracy_score from sklearn.model_selection import train_test_splitdf = pd.read_csv(&amp;#39;glass.csv&amp;#39;)df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    RI Na Mg Al Si K Ca Ba Fe Type     0 1.</description>
+    </item>
+    
+    <item>
       <title>Variance-Metrics</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/variance_metrics/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -135,6 +270,15 @@
       
       <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/weighted_mean_metrics/</guid>
       <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  0.2 * 2 + 0.5 * 4 + 0.3 * 8 4.8  x = [8.</description>
+    </item>
+    
+    <item>
+      <title>X-Y Plot</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/x-y_plot/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/x-y_plot/</guid>
+      <description>import math import statistics import numpy as np import scipy.stats import pandas as pdimport matplotlib.pyplot as plt plt.style.use(&amp;#39;ggplot&amp;#39;)x = np.arange(21) y = 5 + 2 * x + 2 * np.random.randn(21) slope, intercept, r, *__ = scipy.stats.linregress(x, y) line = f&amp;#39;Regression line: y={intercept:.2f}+{slope:.2f}x, r={r:.2f}&amp;#39;fig, ax = plt.subplots() ax.plot(x, y, linewidth=0, marker=&amp;#39;s&amp;#39;, label=&amp;#39;Data points&amp;#39;) ax.plot(x, intercept + slope * x, label=line) ax.set_xlabel(&amp;#39;x&amp;#39;) ax.set_ylabel(&amp;#39;y&amp;#39;) ax.legend(facecolor=&amp;#39;white&amp;#39;) plt.show() </description>
     </item>
     
     <item>
