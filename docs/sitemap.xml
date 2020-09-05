@@ -3,6 +3,81 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/3d_surface/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/decision-tree-classifier/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/ellipse-plot/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/filled-polygon/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/linear_regression/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/logistic-regression/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/naive-bayes-classifier/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/path-plot/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/path-plot/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/pcolormesh-plots/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/polar-plot/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/random-forest-classifier/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/simple-plot/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/sub-plots/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/support-vector-machine/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/numpy/axes_metrics/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -208,6 +283,11 @@
   </url>
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/streamplot/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/train_test_split/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -254,7 +334,7 @@
   
   <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/</loc>
-    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
