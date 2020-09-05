@@ -13,6 +13,16 @@
   </url>
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic-linear-regression/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_pca/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_tokenisation/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -163,6 +173,11 @@
   </url>
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-sorting/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/numpy/percentiles_metrics/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -188,6 +203,11 @@
   </url>
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/statistical-function/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/sklearn/train_test_split/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -199,6 +219,11 @@
   
   <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/numpy/weighted_mean_metrics/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/pandas/working-with-text-data/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   

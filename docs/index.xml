@@ -30,6 +30,24 @@
     </item>
     
     <item>
+      <title>Basic-Linear-Regression</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic-linear-regression/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic-linear-regression/</guid>
+      <description>import matplotlib.pyplot as plt import numpy as np from sklearn import datasets, linear_model from sklearn.metrics import mean_squared_error, r2_score import pandas as pd# Load the diabetes dataset diabetes_data = datasets.load_diabetes() # Print all keys and number of raw and columns print(diabetes_data.keys, diabetes_data.data.shape) &amp;lt;built-in method keys of Bunch object at 0x7f1448121c20&amp;gt; (442, 10)  print(diabetes_data.feature_names) [&#39;age&#39;, &#39;sex&#39;, &#39;bmi&#39;, &#39;bp&#39;, &#39;s1&#39;, &#39;s2&#39;, &#39;s3&#39;, &#39;s4&#39;, &#39;s5&#39;, &#39;s6&#39;]  df = pd.DataFrame(diabetes_data.data) df.columns = diabetes_data.feature_names df[&amp;#39;target&amp;#39;] = diabetes_data.</description>
+    </item>
+    
+    <item>
+      <title>Basic-PCA</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_pca/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_pca/</guid>
+      <description>from sklearn.pipeline import Pipeline, FeatureUnion from sklearn.model_selection import GridSearchCV from sklearn.svm import SVC from sklearn.datasets import load_iris from sklearn.decomposition import PCA from sklearn.feature_selection import SelectKBestiris = load_iris()X, y = iris.data, iris.targetpca = PCA(n_components=2)# Maybe some original features where good, too? selection = SelectKBest(k=1) # Build estimator from PCA and Univariate selection: combined_features = FeatureUnion([(&amp;#34;pca&amp;#34;, pca), (&amp;#34;univ_select&amp;#34;, selection)]) # Use combined features to transform dataset: X_features = combined_features.fit(X, y).transform(X) svm = SVC(kernel=&amp;#34;linear&amp;#34;)pipeline = Pipeline([(&amp;#34;features&amp;#34;, combined_features), (&amp;#34;svm&amp;#34;, svm)]) param_grid = dict(features__pca__n_components=[1, 2, 3], features__univ_select__k=[1, 2], svm__C=[0.</description>
+    </item>
+    
+    <item>
       <title>Basic-tokenisation</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/basic_tokenisation/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -300,6 +318,15 @@
     </item>
     
     <item>
+      <title>Pandas-Sorting</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-sorting/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/pandas-sorting/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearnunsorted_df=pd.DataFrame(np.random.randn(10,2),index=[1,4,6,2,3,5,9,8,0,7],columns=[&amp;#39;col2&amp;#39;,&amp;#39;col1&amp;#39;]) (unsorted_df)  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    col2 col1     1 -0.219984 -0.464369   4 -1.300591 -0.076174   6 0.840346 -1.347094   2 0.221474 0.442064   3 -0.017141 -0.480142   5 -0.</description>
+    </item>
+    
+    <item>
       <title>Percentiles-Metrics</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/numpy/percentiles_metrics/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -345,6 +372,15 @@
     </item>
     
     <item>
+      <title>Statistical-Function</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/statistical-function/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/statistical-function/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearns = pd.Series([1,2,3,4,5,4]) print (s.pct_change()) 0 NaN 1 1.000000 2 0.500000 3 0.333333 4 0.250000 5 -0.200000 dtype: float64  df = pd.DataFrame(np.random.randn(5, 2)) df.pct_change()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    0 1     0 NaN NaN   1 -0.</description>
+    </item>
+    
+    <item>
       <title>Train-Test-split(NB-Clasifier)</title>
       <link>https://Palaniappan12345.github.io/mlnotes/python/sklearn/train_test_split/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -369,6 +405,15 @@
       
       <guid>https://Palaniappan12345.github.io/mlnotes/python/numpy/weighted_mean_metrics/</guid>
       <description>import math import statistics import numpy as np import scipy.stats import pandas as pdx = [8.0, 1, 2.5, 4, 28.0] x_with_nan = [8.0, 1, 2.5, math.nan, 4, 28.0] x [8.0, 1, 2.5, 4, 28.0]  y, y_with_nan = np.array(x), np.array(x_with_nan) z, z_with_nan = pd.Series(x), pd.Series(x_with_nan) y array([ 8. , 1. , 2.5, 4. , 28. ])  0.2 * 2 + 0.5 * 4 + 0.3 * 8 4.8  x = [8.</description>
+    </item>
+    
+    <item>
+      <title>Working-with-text-data</title>
+      <link>https://Palaniappan12345.github.io/mlnotes/python/pandas/working-with-text-data/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Palaniappan12345.github.io/mlnotes/python/pandas/working-with-text-data/</guid>
+      <description>import numpy as np import scipy.stats import pandas as pd import sklearns = pd.Series([&amp;#39;Tom&amp;#39;, &amp;#39;William Rick&amp;#39;, &amp;#39;John&amp;#39;, &amp;#39;Alber@t&amp;#39;, np.nan, &amp;#39;1234&amp;#39;,&amp;#39;SteveSmith&amp;#39;]) s 0 Tom 1 William Rick 2 John 3 Alber@t 4 NaN 5 1234 6 SteveSmith dtype: object  s = pd.Series([&amp;#39;Tom&amp;#39;, &amp;#39;William Rick&amp;#39;, &amp;#39;John&amp;#39;, &amp;#39;Alber@t&amp;#39;, np.nan, &amp;#39;1234&amp;#39;,&amp;#39;SteveSmith&amp;#39;]) s.str.lower() 0 tom 1 william rick 2 john 3 alber@t 4 NaN 5 1234 6 stevesmith dtype: object  s = pd.Series([&amp;#39;Tom&amp;#39;, &amp;#39;William Rick&amp;#39;, &amp;#39;John&amp;#39;, &amp;#39;Alber@t&amp;#39;, np.</description>
     </item>
     
     <item>
