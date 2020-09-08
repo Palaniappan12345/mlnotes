@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66582-32"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-66582-32');
+    </script>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Dimensionality-Reduction-Algorithms" />
+<meta property="og:description" content="-" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/dimensionality_reduction_algorithms/" /><meta property="article:published_time" content="2020-09-07T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-09-07T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dimensionality-Reduction-Algorithms"/>
+<meta name="twitter:description" content="-"/>
+<meta name="generator" content="Hugo 0.50" /> 
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Dimensionality-Reduction-Algorithms",
+  "url": "https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/dimensionality_reduction_algorithms/",
+  "wordCount": "433",
+  "datePublished": "2020-09-07T00:00:00&#43;00:00",
+  "dateModified": "2020-09-07T00:00:00&#43;00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Palaniappan S"
+  },
+  "description": "-"
+}
+</script> 
+
+    <title>Dimensionality-Reduction-Algorithms</title>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+    
+    <link href="https://Palaniappan12345.github.io/mlnotes/css/custom.css" rel="stylesheet"> 
+    <link href="https://Palaniappan12345.github.io/mlnotes/css/syntax.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700" rel="stylesheet">
+        
+    <link href="" rel="alternate" type="application/rss+xml" title="Palaniappan" /> 
+    
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://Palaniappan12345.github.io/mlnotes/">Palaniappan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                 
+
+
+<article>
+  <div class="technical_note">
+  <header>
+      
+    <h1 class="technical_note_title">Dimensionality-Reduction-Algorithms</h1>
+    <div class="technical_note_date">
+      <time datetime=" 2020-09-07T00:00:00Z "> 07 Sep 2020</time>
+    </div>
+  </header>
+  <div class="content">
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># importing required libraries</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span> 
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># read the train and test dataset</span>
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;train.csv&#39;</span><span class="p">)</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;test.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># view the top 3 rows of the dataset</span>
+<span class="k">print</span><span class="p">(</span><span class="n">train_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span></code></pre></div>
+<pre><code>   Item_Weight  Item_Visibility  Item_MRP  Outlet_Establishment_Year  \
+0     6.800000         0.037490   48.6034                       2004   
+1    15.600000         0.172597  114.8518                       1997   
+2    12.911575         0.054721  107.8254                       1985   
+
+   Item_Outlet_Sales  Item_Fat_Content_LF  Item_Fat_Content_Low Fat  \
+0           291.6204                    0                         1   
+1          2163.1842                    0                         1   
+2          2387.5588                    0                         1   
+
+   Item_Fat_Content_Regular  Item_Fat_Content_low fat  Item_Fat_Content_reg  \
+0                         0                         0                     0   
+1                         0                         0                     0   
+2                         0                         0                     0   
+
+   ...  Outlet_Size_High  Outlet_Size_Medium  Outlet_Size_Small  \
+0  ...                 0                   0                  1   
+1  ...                 0                   0                  1   
+2  ...                 0                   1                  0   
+
+   Outlet_Location_Type_Tier 1  Outlet_Location_Type_Tier 2  \
+0                            0                            1   
+1                            1                            0   
+2                            0                            0   
+
+   Outlet_Location_Type_Tier 3  Outlet_Type_Grocery Store  \
+0                            0                          0   
+1                            0                          0   
+2                            1                          0   
+
+   Outlet_Type_Supermarket Type1  Outlet_Type_Supermarket Type2  \
+0                              1                              0   
+1                              1                              0   
+2                              0                              0   
+
+   Outlet_Type_Supermarket Type3  
+0                              0  
+1                              0  
+2                              1  
+
+[3 rows x 36 columns]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># shape of the dataset</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Shape of training data :&#39;</span><span class="p">,</span><span class="n">train_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Shape of testing data :&#39;</span><span class="p">,</span><span class="n">test_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span></code></pre></div>
+<pre><code>Shape of training data : (1364, 36)
+
+Shape of testing data : (341, 36)
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># target variable - Item_Outlet_Sales</span>
+<span class="n">train_x</span> <span class="o">=</span> <span class="n">train_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Item_Outlet_Sales&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">train_y</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">[</span><span class="s1">&#39;Item_Outlet_Sales&#39;</span><span class="p">]</span>
+
+<span class="c1"># seperate the independent and target variable on testing data</span>
+<span class="n">test_x</span> <span class="o">=</span> <span class="n">test_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Item_Outlet_Sales&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">test_y</span> <span class="o">=</span> <span class="n">test_data</span><span class="p">[</span><span class="s1">&#39;Item_Outlet_Sales&#39;</span><span class="p">]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Training model with {} dimensions.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">train_x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span></code></pre></div>
+<pre><code>Training model with 35 dimensions.
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># create object of model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+
+<span class="c1"># fit the model with the training data</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_x</span><span class="p">,</span><span class="n">train_y</span><span class="p">)</span></code></pre></div>
+<pre><code>LinearRegression()
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># predict the target on the train dataset</span>
+<span class="n">predict_train</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">train_x</span><span class="p">)</span>
+
+<span class="c1"># Accuray Score on train dataset</span>
+<span class="n">rmse_train</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">train_y</span><span class="p">,</span><span class="n">predict_train</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">RMSE on train dataset : &#39;</span><span class="p">,</span> <span class="n">rmse_train</span><span class="p">)</span></code></pre></div>
+<pre><code>RMSE on train dataset :  1135.8159344155245
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># predict the target on the test dataset</span>
+<span class="n">predict_test</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_x</span><span class="p">)</span>
+
+<span class="c1"># Accuracy Score on test dataset</span>
+<span class="n">rmse_test</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">test_y</span><span class="p">,</span><span class="n">predict_test</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">RMSE on test dataset : &#39;</span><span class="p">,</span> <span class="n">rmse_test</span><span class="p">)</span></code></pre></div>
+<pre><code>RMSE on test dataset :  1009.2517232209669
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">model_pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">new_train</span> <span class="o">=</span> <span class="n">model_pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">train_x</span><span class="p">)</span>
+<span class="n">new_test</span>  <span class="o">=</span> <span class="n">model_pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">test_x</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Training model with {} dimensions.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span></code></pre></div>
+<pre><code>Training model with 12 dimensions.
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># create object of model</span>
+<span class="n">model_new</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+
+<span class="c1"># fit the model with the training data</span>
+<span class="n">model_new</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">new_train</span><span class="p">,</span><span class="n">train_y</span><span class="p">)</span></code></pre></div>
+<pre><code>LinearRegression()
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># predict the target on the new train dataset</span>
+<span class="n">predict_train_pca</span> <span class="o">=</span> <span class="n">model_new</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_train</span><span class="p">)</span>
+
+<span class="c1"># Accuray Score on train dataset</span>
+<span class="n">rmse_train_pca</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">train_y</span><span class="p">,</span><span class="n">predict_train_pca</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">RMSE on new train dataset : &#39;</span><span class="p">,</span> <span class="n">rmse_train_pca</span><span class="p">)</span></code></pre></div>
+<pre><code>RMSE on new train dataset :  1159.9625320934565
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># predict the target on the new test dataset</span>
+<span class="n">predict_test_pca</span> <span class="o">=</span> <span class="n">model_new</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_test</span><span class="p">)</span>
+
+<span class="c1"># Accuracy Score on test dataset</span>
+<span class="n">rmse_test_pca</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">test_y</span><span class="p">,</span><span class="n">predict_test_pca</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">RMSE on new test dataset : &#39;</span><span class="p">,</span> <span class="n">rmse_test_pca</span><span class="p">)</span></code></pre></div>
+<pre><code>RMSE on new test dataset :  1014.4129003671715
+</code></pre>
+
+</div>
+  <aside>
+      
+      </aside>
+
+    </div>
+</article>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">This project contains 70 pages and is available on <a href="https://github.com/Palaniappan12345">GitHub</a>. Copyright &copy; TEAM TACT, <time datetime="2019">2019</time>.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

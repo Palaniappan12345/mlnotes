@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/dimensionality_reduction_algorithms/</loc>
+    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/gradient_boosting_algorithms/</loc>
+    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/k-means/</loc>
+    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/xgboost/</loc>
+    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/3d_surface/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
@@ -43,11 +63,6 @@
   </url>
   
   <url>
-    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/path-plot/</loc>
-    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/data_visualisation/pcolormesh-plots/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
@@ -74,6 +89,11 @@
   
   <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/support-vector-machine/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Palaniappan12345.github.io/mlnotes/python/ml_algorithms/knn-algorithm/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -334,7 +354,7 @@
   
   <url>
     <loc>https://Palaniappan12345.github.io/mlnotes/</loc>
-    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
